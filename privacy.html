@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Slackwarrior</title>
+        <title>Slackwarrior Documentation</title>
         <link rel="shortcut icon" type="image/x-icon" href="http://scheijan.net:8000/craftybot512.png" />
         <meta name="HandheldFriendly" content="true" />
         <meta name="viewport" content="width=800" />
@@ -14,11 +14,11 @@
         <link rel="stylesheet" type="text/css" media="all" href="http://scheijan.net/css/header.source.v1429808923.css" />
         <script type="text/javascript" src="./static/lab.source.v1429808924.js"></script>
         <script type="text/javascript" src="./static/jquery-1.4.4.source.v1429808924.js"></script>
-        <meta property="og:title" content="Slackwarrior" />
+        <meta property="og:title" content="Slackwarrior Documentation" />
         <meta property="og:description" content="A Slack chatbot that helps managing tasks." />
         <meta property="og:type" content="chatbot" />
-        <meta property="og:url" content="http://slackwarrior.org/" />
-        <meta property="og:site_name" content="Slackwarrior" />
+        <meta property="og:url" content="http://slackwarrior.org/doc.html" />
+        <meta property="og:site_name" content="Slackwarrior Documentation" />
         <style type="text/css">
             /* Fonts */
             @font-face{
@@ -30,7 +30,36 @@
                 font-family:'VAGRundschriftD-Lig';
                 src:url("./webfonts/eot/style_32002.eot");
                 src:url("./webfonts/eot/style_32002.eot?#iefix") format("embedded-opentype"), url("./webfonts/woff/style_32002.woff") format("woff"), url("./webfonts/ttf/style_32002.ttf") format("truetype"), url("./webfonts/svg/style_32002.svg#VAGRundschriftD-Lig") format("svg");
-            }</style>
+            }
+            
+            code{
+                font-size:.875rem;
+                font-family:Monaco, Menlo, Consolas, "Courier New", monospace !important;
+                border:1px solid #E8E8E8;
+                padding:.1rem .4rem;
+                border-radius:.2rem;
+                -webkit-font-variant-ligatures:none;
+                font-variant-ligatures:none
+            }
+            code{
+                background:#f9f9f9;
+                color:#c25;
+                font-size:.8rem;
+                padding:1px 3px;
+                white-space:normal
+            }
+            code.special_formatting a{
+                color:inherit
+            }
+            code:after,
+            code:before{
+                letter-spacing:-.25rem;
+                content:"\00a0"
+            }
+            td, th {
+                padding: 10px;
+            }
+            </style>
     </head>
     <body style="background: none; background-color: #F0F0F0;" class="nav_encyclopedia">
         <div class="dates" style="text-align: center">
@@ -53,30 +82,24 @@
             <br />
             <br />
             <img src="http://c2.glitch.bz/items/2012-12-06/npc_crafty_bot__x1_idle0_png_1354839494.png" width="200px" />
-            <h1 style="margin-top: 4rem;">Hi, I'm Slackwarrior!</h1>
-            <h2 class="subheading">A friendly, helpful bot that can<br /> assist you in managing your tasks.<br /><br /><script async="async" defer="defer" src="http://slackin.scheijan.net/slackin.js?large"></script></h2>
+            <h1 style="margin-top: 4rem;">Slackwarrior Privacy Policy</h1>
+            
             <div class="container">
-                <hr style="border-color: lightgrey"/>
+                <p>
+                <hr style="border-color: lightgrey" />
                 <div id="downloads">
-                    <h3>How can Slackwarrior help me?</h3>
-                    <p>Leveraging the powers of <a href="http://taskwarrior.org">Taskwarrior</a> and <a href="inthe.am">inthe.am</a> Slackwarrior can assist you managing your tasks on Slack.</p>
-                    <p>Slackwarrior can add tasks for you with different priorities, assign them to projects and add tags to categorize them. It can show you your current tasks in different ways and "start" and "stop" them for you to track the time you work on a task. And once you're done you can tell it to mark your task as completed.</p>
+                    <h2 class="subheading">What we collect</h2>
+                    <p>Slackwarrior collects information that is sent directly to him, via direct message or when he  is mentioned. He also saves your inthe.am API Key to get access to your task list. Please keep in mind that inthe.am keeps a copy of your tasks.</p>
+                    <p>Analytics services from <a href="http://dashbot.io">dashbot.io</a> are used to improve the Slackwarrior's services. During that process parts of your conversations with Slackwarrior are sent to their servers for analysis.</p>
+                    <p>Slackwarrior also collects Slack account and access information from users for the purposes of connecting to the Slack API and to authenticate access to information on the Slackwarrior website. </p>
+                    <p>Using standard web analytics and web server technologies, the Slackwarrior website logs your navigation actions, IP address, cookies and other information provided by your web browser.</p>
                     <hr style="margin: 1.5rem 0; border-color: lightgrey" />
-                    <p></p>
-                    <h3>So what is Taskwarrior?</h3>
-                    <p>To quote the <a href="http://taskwarrior.org">Taskwarrior website:</a></p>
-                    <p style="background-color: white; padding: 3px; padding-left: 18px"><i>Taskwarrior is Free and Open Source Software that manages your TODO list from the command line. It is flexible, fast, and unobtrusive. It does its job then gets out of your way.</i></p>
-                    <p>It is very powerful and offers a ton of features, many of which are not supported by Slackwarrior. So if you need more than a simple task list you should really take a look. </p>
-                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
-                    <h3>And how does inthe.am fit in?</h3>
-                    <p>On the one hand <a href="http://inthe.am">inthe.am</a> is a public Taskwarrior server which allows you to sync your tasks among different devices. On the other hand it's also a website you can use to work on your task list with any browser. And it offers an HTTP API which is what Slackwarrior works with. So to use Slackwarrior you'll need an account over there. It's completely free and you can sign up with your Google account.</p>
-                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
-                    <h3>Alright, how do I get started?</h3>
-                    <p>If you want to take a look and find out whether Slackwarrior is for you, you should join us on the Slackwarrior Slack team. This is also where you can get help if you ever need some.</p>
-                    <p>Once you're hooked up and want Slackwarrior on your own Slack team you can add it <a href="/app.html"> here</a>. Or you can get it on <a href="https://github.com/scheijan/slackwarrior">GitHub</a> and run your own instance.</p>
-                    <hr style="border-color: lightgrey" />
-                    <div style="text-align: center;"><img src="http://c2.glitch.bz/items/2012-12-06/npc_crafty_bot__x1_sleepMode_png_1354839504.png" /></div>
+                    <h2 class="subheading">How we use your data</h2>
+                    <p>Your data will only be used for the purpose of improving the bot and for finding/analyzing bugs. We will not give your data to any third party not mentioned here and we will not send you emails or otherwise bug you.</p>
                 </div>
+                
+                <hr style="border-color: lightgrey"/>
+                <div style="text-align: center;"><img src="http://c2.glitch.bz/items/2012-12-06/npc_crafty_bot__x1_sleepMode_png_1354839504.png" /></div>
                 <div id="footer" style="font-size: 8pt;">
                     <div style="text-align: right; float: right; width: 330px;">A huge thank you to <a href="https://slack.com/">Slack</a> for releasing all the artwork from <a href="http://www.glitchthegame.com/">Glitch</a>!</div>
                     <div style="text-align: left; float: left; width: 320px;">Brought to you by <a href="http://scheijan.net">scheijan</a><span style="padding-left: 10em"><a href="http://slackwarrior.org/privacy.html">Privacy Policy</a></span></div>
