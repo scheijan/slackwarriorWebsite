@@ -88,19 +88,60 @@
                 <p>
                 <hr style="border-color: lightgrey" />
                 <div id="downloads">
-                    <h2 class="subheading" id="guide">Guide</h2>
-                    <p>Firstly, you’ll need to go through the onboarding process, to connect your inthe.am account to Slackwarrior. He’ll help you when you tap the computer reaction from the <code>help</code> menu, or DM him with <code>onboarding</code>.</p>
+                	<p>Hello! Welcome &#128578;</p>
+                	<p>You have found our handsome and charming bot, Slackwarrior, and you want to keep track of a todo list on Slack.</p><br />
+                    <h2 class="subheading" id="guide">So You Want To Become A Well-Organised Evil Villain using Slackwarrior:</h2>
+                    <p>Firstly, you’ll need to go through the <b>onboarding</b> process, to connect your <a href="https://inthe.am/about">inthe.am</a> account to Slackwarrior. He’ll help you when you tap the &#128187; computer reaction from the <code>help</code> menu, or DM him with <code>onboarding</code> to skip straight there.</p>
                     <p>Once you’ve copied and pasted your API Key to Slackwarrior, he’ll suggest that you add a new task. That’s a really great idea, because trying to access or modify a nonexistent task list will result in all kinds of errors.</p>
-                    <p>Every time you want to tell Slackwarrior to do something to or with a task, you need to use the command <code>task</code> .</p>
-                    <p>To add a task called “return library books”, tell Slackwarrior <code>task add return library books</code>. Then, you can use <code>task</code> or <code>task list</code> to see your current tasks - currently a task list of one.</p>
+                    <p>Every time you want to tell Slackwarrior to do something to or with a task, you need to use the command <code>task</code>.</p>
+                    <p>To <b>add a task</b> called “become evil villain”, tell Slackwarrior <code>task add become evil villain</code>. Then, you can use <code>task</code> to see your pending tasks - just the one for now.</p>
                     <hr style="margin: 1.5rem 0; border-color: lightgrey" />
-                    <p>SCREENSHOTS</p>
+                    <img src="./static/task_view_1.png" width="400px" />
                     <hr style="margin: 1.5rem 0; border-color: lightgrey" />
-                    <p>Sometimes, you want to distinguish between tasks with a different level of priority. With Slackbot, we can easily set tasks as High, Medium or Low priority with <code>priority:H</code>, <code>priority:M</code> or <code>priority:L</code></p>
-                    <p>When we’re adding two data fields, the order after the command is not important. We can say either:<br/>
-                    <code>task add priority:H run the dishwasher</code><br/>or<br/>
-                    <code>task add run the dishwasher priority:H</code><br/><br/>
-                    Tasks will default to Low if you choose not to assign them as being higher priority.</p>
+                    <p>Unfortunately, as soon as you look at this task list, you realise that becoming an evil villain will take more than a single task, so it's really a project. You still want to mark off a task as soon as possible, so you <b>modify the task</b> by typing <code>task 23 modify create evil villain project</code> to rename it "create evil villain project".</p>
+                    <p>Then you <code>task add practice maniacal laughter project:skynet</code> to <b>assign a project</b> you've just invented, called skynet, to your new task "practice maniacal laughter". You can modify anything about a task once it's created, including adding or changing its assigned project.</p>
+                    <p>And now that you have created an evil villain project, it's time to type <code>task 23 done</code> to <b>mark your task as done</b>. Hooray!</p>
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img
+                    src="./static/task_23_done.png"
+                    width="400px"
+                    style="vertical-align: middle"  />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <p>Slackwarrior is telling you off, though, because you have more urgent tasks waiting for you.</p>
+                    <p>Taskwarrior uses a lot of metrics to determine <a href="https://taskwarrior.org/docs/urgency.html">urgency</a>, one of which is your task's <b>priority</b> setting. With Slackbot, you can easily set tasks as High, Medium or Low priority with <code>priority:H</code>, <code>priority:M</code> or <code>priority:L</code> respectively. (Tasks will default to Low if you choose not to assign them as being higher priority).</p>
+                    <p>When you're <b>adding two or more data fields</b>, the order after the command is not important. We can say any of the following:<br/>
+                    <ul>
+                     	<li><code>task add priority:M purchase sunglasses project:skynet</code></li>
+	                    <li><code>task add project:skynet purchase sunglasses priority:M</code></li>
+                     	<li><code>task add project:skynet priority:M purchase sunglasses</code>.</li><br/>
+                    Because you're not only evil and villainous, but also contrarian, you choose to type <code>task add priority:M project:skynet purchase sunglasses</code> so as not to follow any of the suggestions given. And while you're thinking about it, <code>task add take ultimate extreme driving classes priority:H</code>. It's not part of the skynet project, but you have an inkling it'll come in handy one day.</p>
+                    <p>You check your tasks again with <code>task</code> to decide which one to work on first
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_view_2.png" width="400px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    and you notice that with the project, there's also a place for a <b>tags</b> data field. You enter one of your bucket list goals, <code>task add hike up to the Hollywood sign priority:H +LA</code>, that also reminds you <code>task add +LA priority:H find a phone book project:skynet</code> is pretty important.</p>
+                    <p>So, now your <code>task</code> view looks like this:
+                	<hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_view_3.png" width="400px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    but you only have 5 minutes, so you want to check your lower urgency tasks. You type <code>task list</code>
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_list_1.png" width="600px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    and even though it doesn't show tags or due dates, you have a good overview of everything on your plate right now.</p>
+                    <p>Maniacal laughter is something you can do in 5 minutes, so you type <code>task 24 start</code> and let it rip. When you're done, you mark <code>task 24 done</code> and head out to your ultimate extreme driving class. You can check reports about time spent on tasks using <a href="https://taskwarrior.org/docs/report.html">Taskwarrior</a> some other time.</p>
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <p>When you get back, you mark <code>task 26 done</code></p> and want to add a new task, but you sneeze and end up entering <code>task add rubeskfjdd</code> by mistake. You're too mad to modify the description, so you <b>delete the task</b> with <code>task 29 modify status:deleted</code> instead.</p>
+                    <p>You take a deep breath and try to add your task with an important <b>due date</b> again with <code>task add source titanium project:skynet priority:M +TopSecret due:"two weeks"</code> and (<code>task</code>) check your top 3 tasks.</p>
+        			<hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_view_4.png" width="400px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <p>You're not going to LA until next month, so you set those two tasks to <b>wait</b> until then with <code>task 28 modify wait:"next month"</code> and <code>task 27 modify wait:"next month"</code> and take a break after such a busy day. Those tasks don't exist as far as Slackwarrior is concerned until that date. You can click on the hyperlink in the short ID to check on them at <a href="https://inthe.am/about">inthe.am</a>.</p>
+                    You take a look at your current <code>task list</code> and find that you only have two tasks left! You should feel proud of yourself for all this work.
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_list_2.png" width="500px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <p>And now, you're an expert in all the Slackwarrior commands, and you have no reason to be disorganised and unsuccessful in your evil villain adventures. Congrats! &#127881;</p> 
                 </div>
                 <!-- end of guide -->
                 <hr style="border-color: lightgrey" />
