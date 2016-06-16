@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Slackwarrior Guide</title>
+        <link rel="shortcut icon" type="image/x-icon" href="http://scheijan.net:8000/craftybot512.png" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="viewport" content="width=800" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://scheijan.net/css/reset.source.v1429808923.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://scheijan.net/css/base.source.v1429808923.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="./static/homepage.source.v1429808923.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="./static/ribbon.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://scheijan.net/css/template.source.v1429808923.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://scheijan.net/css/header.source.v1429808923.css" />
+        <script type="text/javascript" src="./static/lab.source.v1429808924.js"></script>
+        <script type="text/javascript" src="./static/jquery-1.4.4.source.v1429808924.js"></script>
+        <meta property="og:title" content="Slackwarrior Guide" />
+        <meta property="og:description" content="A Slack chatbot that helps managing tasks." />
+        <meta property="og:type" content="chatbot" />
+        <meta property="og:url" content="http://slackwarrior.org/guide.html" />
+        <meta property="og:site_name" content="Slackwarrior Guide" />
+        <style type="text/css">
+            /* Fonts */
+            @font-face{
+                font-family:'VAGRundschriftD';
+                src:url("./webfonts/eot/style_5784.eot");
+                src:url("./webfonts/eot/style_5784.eot?#iefix") format("embedded-opentype"), url("./webfonts/woff/style_5784.woff") format("woff"), url("./webfonts/ttf/style_5784.ttf") format("truetype"), url("./webfonts/svg/style_5784.svg#VAGRundschriftD") format("svg");
+            }
+            @font-face{
+                font-family:'VAGRundschriftD-Lig';
+                src:url("./webfonts/eot/style_32002.eot");
+                src:url("./webfonts/eot/style_32002.eot?#iefix") format("embedded-opentype"), url("./webfonts/woff/style_32002.woff") format("woff"), url("./webfonts/ttf/style_32002.ttf") format("truetype"), url("./webfonts/svg/style_32002.svg#VAGRundschriftD-Lig") format("svg");
+            }
+            
+            code{
+                font-size:.875rem;
+                font-family:Monaco, Menlo, Consolas, "Courier New", monospace !important;
+                border:1px solid #E8E8E8;
+                padding:.1rem .4rem;
+                border-radius:.2rem;
+                -webkit-font-variant-ligatures:none;
+                font-variant-ligatures:none
+            }
+            code{
+                background:#f9f9f9;
+                color:#c25;
+                font-size:.8rem;
+                padding:1px 3px;
+                white-space:normal
+            }
+            code.special_formatting a{
+                color:inherit
+            }
+            code:after,
+            code:before{
+                letter-spacing:-.25rem;
+                content:"\00a0"
+            }
+            td, th {
+                padding: 10px;
+            }
+            </style>
+    </head>
+    <body style="background: none; background-color: #F0F0F0;" class="nav_encyclopedia">
+        <div class="dates" style="text-align: center">
+            <div class="header-bg">
+                <div class="site-menu">
+                    <ul>
+                        <li><a href="/">Slackwarrior</a></li>
+                        <li><a href="/doc.html">Docs</a></li>
+                        <li><a href="http://slackin.scheijan.net"><img src="./static/npc_crafty_bot__x1_idle0_png_1354839494_right.png" width="20px" style="vertical-align: middle" /> on Slack</a></li>
+                        <li><a href="https://github.com/scheijan/slackwarrior"><img src="./static/npc_crafty_bot__x1_idle0_png_1354839494_right.png" width="20px" style="vertical-align: middle" /> on Github</a></li>
+                        <li><a href="/app.html"><img src="./static/npc_crafty_bot__x1_idle0_png_1354839494_right.png" width="20px" style="vertical-align: middle" /> on your Team</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="/" class="logo">
+                <img src="./static/npc_crafty_bot__x1_idle0_png_1354839494_right.png" width="80px" />
+            </a>
+            <br />
+            <br />
+            <br />
+            <img src="http://c2.glitch.bz/items/2012-12-06/npc_crafty_bot__x1_idle0_png_1354839494.png" width="200px" />
+            <h1 style="margin-top: 4rem;">Slackwarrior Guide</h1>
+            <h3 class="subheading">Guide - <a href="/doc.html#commands">Commands</a> - <a href="/doc.html#fields">Fields</a></h3>
+            <div class="container">
+                <p>
+                <hr style="border-color: lightgrey" />
+                <div id="downloads">
+                	<p>Hello! Welcome &#128578;</p>
+                	<p>You have found our handsome and charming bot, Slackwarrior, and you want to keep track of a todo list on Slack.</p><br />
+                    <h2 class="subheading" id="guide">So You Want To Become A Well-Organised Evil Villain using Slackwarrior:</h2>
+                    <p>Firstly, you’ll need to go through the <b>onboarding</b> process, to connect your <a href="https://inthe.am/about">inthe.am</a> account to Slackwarrior. He’ll help you when you tap the &#128187; computer reaction from the <code>help</code> menu, or DM him with <code>onboarding</code> to skip straight there.</p>
+                    <p>Once you’ve copied and pasted your API Key to Slackwarrior, he’ll suggest that you add a new task. That’s a really great idea, because trying to access or modify a nonexistent task list will result in all kinds of errors.</p>
+                    <p>Every time you want to tell Slackwarrior to do something to or with a task, you need to use the command <code>task</code>.</p>
+                    <p>To <b>add a task</b> called “become evil villain”, tell Slackwarrior <code>task add become evil villain</code>. Then, you can use <code>task</code> to see your pending tasks - just the one for now.</p>
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_view_1.png" width="400px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <p>Unfortunately, as soon as you look at this task list, you realise that becoming an evil villain will take more than a single task, so it's really a project. You still want to mark off a task as soon as possible, so you <b>modify the task</b> by typing <code>task 23 modify create evil villain project</code> to rename it "create evil villain project".</p>
+                    <p>Then you <code>task add practice maniacal laughter project:skynet</code> to <b>assign a project</b> you've just invented, called skynet, to your new task "practice maniacal laughter". You can modify anything about a task once it's created, including adding or changing its assigned project.</p>
+                    <p>And now that you have created an evil villain project, it's time to type <code>task 23 done</code> to <b>mark your task as done</b>. Hooray!</p>
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img
+                    src="./static/task_23_done.png"
+                    width="400px"
+                    style="vertical-align: middle"  />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <p>Slackwarrior is telling you off, though, because you have more urgent tasks waiting for you.</p>
+                    <p>Taskwarrior uses a lot of metrics to determine <a href="https://taskwarrior.org/docs/urgency.html">urgency</a>, one of which is your task's <b>priority</b> setting. With Slackbot, you can easily set tasks as High, Medium or Low priority with <code>priority:H</code>, <code>priority:M</code> or <code>priority:L</code> respectively. (Tasks will default to Low if you choose not to assign them as being higher priority).</p>
+                    <p>When you're <b>adding two or more data fields</b>, the order after the command is not important. We can say any of the following:<br/>
+                    <ul>
+                     	<li><code>task add priority:M purchase sunglasses project:skynet</code></li>
+	                    <li><code>task add project:skynet purchase sunglasses priority:M</code></li>
+                     	<li><code>task add project:skynet priority:M purchase sunglasses</code>.</li><br/>
+                    Because you're not only evil and villainous, but also contrarian, you choose to type <code>task add priority:M project:skynet purchase sunglasses</code> so as not to follow any of the suggestions given. And while you're thinking about it, <code>task add take ultimate extreme driving classes priority:H</code>. It's not part of the skynet project, but you have an inkling it'll come in handy one day.</p>
+                    <p>You check your tasks again with <code>task</code> to decide which one to work on first
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_view_2.png" width="400px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    and you notice that with the project, there's also a place for a <b>tags</b> data field. You enter one of your bucket list goals, <code>task add hike up to the Hollywood sign priority:H +LA</code>, that also reminds you <code>task add +LA priority:H find a phone book project:skynet</code> is pretty important.</p>
+                    <p>So, now your <code>task</code> view looks like this:
+                	<hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_view_3.png" width="400px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    but you only have 5 minutes, so you want to check your lower urgency tasks. You type <code>task list</code>
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_list_1.png" width="600px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    and even though it doesn't show tags or due dates, you have a good overview of everything on your plate right now.</p>
+                    <p>Maniacal laughter is something you can do in 5 minutes, so you type <code>task 24 start</code> and let it rip. When you're done, you mark <code>task 24 done</code> and head out to your ultimate extreme driving class. You can check reports about time spent on tasks using <a href="https://taskwarrior.org/docs/report.html">Taskwarrior</a> some other time.</p>
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <p>When you get back, you mark <code>task 26 done</code></p> and want to add a new task, but you sneeze and end up entering <code>task add rubeskfjdd</code> by mistake. You're too mad to modify the description, so you <b>delete the task</b> with <code>task 29 modify status:deleted</code> instead.</p>
+                    <p>You take a deep breath and try to add your task with an important <b>due date</b> again with <code>task add source titanium project:skynet priority:M +TopSecret due:"two weeks"</code> and (<code>task</code>) check your top 3 tasks.</p>
+        			<hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_view_4.png" width="400px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <p>You're not going to LA until next month, so you set those two tasks to <b>wait</b> until then with <code>task 28 modify wait:"next month"</code> and <code>task 27 modify wait:"next month"</code> and take a break after such a busy day. Those tasks don't exist as far as Slackwarrior is concerned until that date. You can click on the hyperlink in the short ID to check on them at <a href="https://inthe.am/about">inthe.am</a>.</p>
+                    You take a look at your current <code>task list</code> and find that you only have two tasks left! You should feel proud of yourself for all this work.
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <img src="./static/task_list_2.png" width="500px" />
+                    <hr style="margin: 1.5rem 0; border-color: lightgrey" />
+                    <p>And now, you're an expert in all the Slackwarrior commands, and you have no reason to be disorganised and unsuccessful in your evil villain adventures. Congrats! &#127881;</p> 
+                </div>
+                <hr style="border-color: lightgrey"/>
+                <div style="text-align: center;"><img src="http://c2.glitch.bz/items/2012-12-06/npc_crafty_bot__x1_sleepMode_png_1354839504.png" /></div>
+                <div id="footer" style="font-size: 8pt;">
+                    <div style="text-align: right; float: right; width: 330px;">A huge thank you to <a href="https://slack.com/">Slack</a> for releasing all the artwork from <a href="http://www.glitchthegame.com/">Glitch</a>!</div>
+                    <div style="text-align: left; float: left; width: 320px;">Brought to you by <a href="http://scheijan.net">scheijan</a><span style="padding-left: 10em"><a href="http://slackwarrior.org/privacy.html">Privacy Policy</a></span></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
