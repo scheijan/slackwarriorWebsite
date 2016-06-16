@@ -1,16 +1,17 @@
 /* Fonts */
-@font-face{
+@font-face {
     font-family:'VAGRundschriftD';
     src:url("../webfonts/eot/style_5784.eot");
     src:url("../webfonts/eot/style_5784.eot?#iefix") format("embedded-opentype"), url("../webfonts/woff/style_5784.woff") format("woff"), url("../webfonts/ttf/style_5784.ttf") format("truetype"), url("../webfonts/svg/style_5784.svg#VAGRundschriftD") format("svg");
 }
-@font-face{
+
+@font-face {
     font-family:'VAGRundschriftD-Lig';
     src:url("../webfonts/eot/style_32002.eot");
     src:url("../webfonts/eot/style_32002.eot?#iefix") format("embedded-opentype"), url("../webfonts/woff/style_32002.woff") format("woff"), url("../webfonts/ttf/style_32002.ttf") format("truetype"), url("../webfonts/svg/style_32002.svg#VAGRundschriftD-Lig") format("svg");
 }
 
-code{
+code {
     font-size:.875rem;
     font-family:Monaco, Menlo, Consolas, "Courier New", monospace !important;
     border:1px solid #E8E8E8;
@@ -20,18 +21,20 @@ code{
     font-variant-ligatures:none;
     vertical-align: middle;
 }
-code{
+
+code {
     background:#f9f9f9;
     color:#c25;
     font-size:.8rem;
     padding:1px 3px;
     white-space:normal
 }
-code.special_formatting a{
+
+code.special_formatting a {
     color:inherit
 }
-code:after,
-code:before{
+
+code:after, code:before {
     letter-spacing:-.25rem;
     content:"\00a0";
 }
