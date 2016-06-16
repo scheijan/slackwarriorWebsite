@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="http://scheijan.net/css/reset.source.v1429808923.css" />
         <link rel="stylesheet" type="text/css" media="all" href="http://scheijan.net/css/base.source.v1429808923.css" />
         <link rel="stylesheet" type="text/css" media="all" href="./static/homepage.source.v1429808923.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="./static/slackwarrior.css" />        
+        <link rel="stylesheet" type="text/css" media="all" href="./static/slackwarrior.css" />
         <link rel="stylesheet" type="text/css" media="all" href="http://scheijan.net/css/template.source.v1429808923.css" />
         <link rel="stylesheet" type="text/css" media="all" href="http://scheijan.net/css/header.source.v1429808923.css" />
         <script type="text/javascript" src="./static/lab.source.v1429808924.js"></script>
@@ -44,7 +44,6 @@
             <h1 style="margin-top: 4rem;">Slackwarrior Documentation</h1>
             <h3 class="subheading"><a href="/guide.html">Guide</a> - <a href="#commands">Commands</a> - <a href="#fields">Fields</a></h3>
             <div class="container">
-                <p>
                 <hr />
                 <div id="downloads">
                     <p>If this is your first time using Slackwarrior you should read our <a href="/guide.html">Guide</a> first. Below you'll find a list of all <a href="#commands">commands</a> and <a href="#fields">fields</a> you can use with your Tasks.</p>
@@ -53,15 +52,15 @@
                 <hr />
                 <div id="downloads">
                     <h2 class="subheading" id="commands">Commands</h2>
-                    <br/>
+                    <br />
                     <h2>Getting information about tasks</h2>
-                    <br/>
+                    <br />
                     <table style="border: 1px solid lightgrey">
                         <tbody>
                             <tr>
                                 <td width="50%"><code style="font-size: 15pt">task</code></td>
                                 <td>Get a list with some details of your three most urgent tasks, sorted by urgency in descending order.</td>
-                            </tr>  
+                            </tr>
                             <tr>
                                 <td><code style="font-size: 15pt">task list</code></td>
                                 <td>Get a complete list of all pending tasks, sorted by urgency in descending order.</td>
@@ -72,33 +71,33 @@
                             </tr>
                         </tbody>
                     </table>
-                    <br/>
+                    <br />
                     <!-- -->
                     <h2>Adding tasks</h2>
-                    <br/>
+                    <br />
                     <table style="border: 1px solid lightgrey">
                         <tbody>
                             <tr>
                                 <td width="50%"><code style="font-size: 15pt">task add DESCRIPTION</code></td>
                                 <td>Add a task to your list with a given description.</td>
-                            </tr>  
+                            </tr>
                         </tbody>
                     </table>
-                    <br/>
+                    <br />
                     <p>The <code>description</code> is the only mandatory field. If not provided all fields but <code>priority</code> will be left empty. The field <code>priority</code> has a default value of <code>LOW</code>.</p>
                     <p>You can use all available fields when adding a task:</p>
                     <p><code>task add go back in time to deal with Sarah Conner project:skynet priority:H due:1997-08-29</code></p>
                     <p>For a complete list of options check <a href="#fields">fields</a>.</p>
-                    <br/>
+                    <br />
                     <!-- -->
                     <h2>Modifying tasks</h2>
-                    <br/>
+                    <br />
                     <table style="border: 1px solid lightgrey">
                         <tbody>
                             <tr>
                                 <td width="50%"><code style="font-size: 15pt">task ID done</code></td>
                                 <td>Complete the task with the given ID.</td>
-                            </tr>  
+                            </tr>
                             <tr>
                                 <td><code style="font-size: 15pt">task ID start</code></td>
                                 <td>Start tracking time for the task with the given ID.</td>
@@ -110,19 +109,20 @@
                             <tr>
                                 <td><code style="font-size: 15pt">task ID annotate TEXT</code></td>
                                 <td>Add an annotation with the given TEXT to the task with the given ID.</td>
-                            </tr>                            
+                            </tr>
                             <tr>
-                                <td><code style="font-size: 15pt">task ID modify</code><br/><code style="font-size: 15pt">[FIELD:VALUE]</code> <br/><code style="font-size: 15pt">+NEWTAG -OLDTAG</code></td>
+                                <td><code style="font-size: 15pt">task ID modify</code><br /><code style="font-size: 15pt">[FIELD:VALUE]</code>
+                                    <br /><code style="font-size: 15pt">+NEWTAG -OLDTAG</code></td>
                                 <td>Modify the task with the given ID. You can change all existing fields and add/remove tags with this command. For a complete list check <a href="#fields">fields</a>.</td>
-                            </tr>                            
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-                   <!-- end of guide -->
+                <!-- end of guide -->
                 <hr />
                 <div id="downloads">
                     <h2 class="subheading" id="fields">Fields</h2>
-                    <br/>
+                    <br />
                     <table style="border: 1px solid lightgrey">
                         <thead>
                             <tr>
@@ -132,9 +132,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
                             <tr>
-                             <td>ID <span style="color: silver; font-size: medium;">(readonly)</span></td>
+                                <td>ID <span style="color: silver; font-size: medium;">(readonly)</span></td>
                                 <td><code>number</code></td>
                                 <td>Short ID of the task.</td>
                             </tr>
@@ -147,12 +146,12 @@
                                 <td>urgency <span style="color: silver; font-size: medium;">(readonly)</span></td>
                                 <td><code>number</code></td>
                                 <td>Urgency is calculated by several factors. For details see the <a href="https://taskwarrior.org/docs/urgency.html">taskwarrior documentation</a>.</td>
-                            </tr>    
+                            </tr>
                             <tr>
                                 <td>project</td>
                                 <td><code>string</code></td>
                                 <td><code>task add infiltrate resistance pro:skynet</code></td>
-                            </tr>     
+                            </tr>
                             <tr>
                                 <td>priority</td>
                                 <td><code>low, medium, high</code></td>
@@ -160,7 +159,7 @@
                             </tr>
                             <tr>
                                 <td>status</td>
-                                <td><code>pending, waiting,</code><br/><code>completed, deleted</code></td>
+                                <td><code>pending, waiting,</code><br /><code>completed, deleted</code></td>
                                 <td><code>task 23 modify status:waiting</code></td>
                             </tr>
                             <tr>
@@ -185,12 +184,12 @@
                             </tr>
                         </tbody>
                     </table>
-                    <br/>
+                    <br />
                     <p>You can use shorthand forms for all field names and defined field values (<code>priority, status</code>), as long as they are distinct.</p>
                     <p>All <code>datetime</code> fields accept all date/time values that can be parsed by <a href="http://date.js.org">date.js</a>.</p>
-                    <p>For more detailed information on fields in taskwarrior, please refer to the <a href="http://taskwarrior.org/docs/commands/columns.html">documentation.</a>
+                    <p>For more detailed information on fields in taskwarrior, please refer to the <a href="http://taskwarrior.org/docs/commands/columns.html">documentation.</a></p>
                 </div>
-                <hr/>
+                <hr />
                 <div style="text-align: center;"><img src="http://c2.glitch.bz/items/2012-12-06/npc_crafty_bot__x1_sleepMode_png_1354839504.png" /></div>
                 <div id="footer" style="font-size: 8pt;">
                     <div style="text-align: right; float: right; width: 330px;">A huge thank you to <a href="https://slack.com/">Slack</a> for releasing all the artwork from <a href="http://www.glitchthegame.com/">Glitch</a>!</div>
