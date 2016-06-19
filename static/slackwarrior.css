@@ -47,3 +47,7 @@ body {
     background: none; 
     background-color: #F0F0F0;
 }
+
+td {
+    padding: 8px;
+}
